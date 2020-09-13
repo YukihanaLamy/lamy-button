@@ -32,7 +32,7 @@ export default {
     }
   },
   created() {
-    this.tip = this.tips[Math.round(Math.random()*(this.tips.length-1))]
+    this.tip = this.tips[Math.floor(Math.random()*(this.tips.length))]
   }
 }
 </script>
@@ -44,7 +44,7 @@ export default {
     height 100%
     width 100%
     background-color #F6FAFE
-    font-family: "Source Han Sans SC", "Source Han Sans CN", -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC",  "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+    font-family: "PingFang SC", "Source Han Sans SC", "Source Han Sans CN", -apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC",  "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
   height 100%
   width 100%
   font-size 14px
