@@ -1,17 +1,17 @@
 import Head from 'next/head'
 import React, { ReactNode, useEffect } from 'react'
 import SettingContainer from '../containers/SettingContainer'
-import createSnowDrop from '../utils/SnowDrop'
 import ControlPanel from './ControlPanel'
 
 type Props = {
   children?: ReactNode
   title?: string
+  hideHeader?: boolean
 }
 
-const Layout: React.FC<Props> = ({ children, title = '雪按钮 - Lamy button (,, •ω• ,,) و ♡' }) => {
+const Layout: React.FC<Props> = ({ children, title = '雪按钮 - Lamy button (,, •ω• ,,) و ♡', hideHeader = false }) => {
   useEffect(() => {
-    createSnowDrop()
+    // createSnowDrop()
   }, [])
 
   return (
@@ -24,14 +24,17 @@ const Layout: React.FC<Props> = ({ children, title = '雪按钮 - Lamy button (,
       </Head>
 
       <SettingContainer.Provider>
-        <div className="header">
-          <div className="logo"><span>LAMY</span>&nbsp;<span>BUTTON</span></div>
-          <ControlPanel />
-        </div>
+        <div className="in-develop text-sm">* 功能试验版本，不代表最终品质</div>
+        {
+          !hideHeader && <div className="header">
+            <div className="logo"><span>LAMY</span>&nbsp;<span>BUTTON</span></div>
+            <ControlPanel />
+          </div>
+        }
 
         {children}
 
-        <div className="potato-mine"></div>
+        {/* <div className="potato-mine"></div> */}
       </SettingContainer.Provider>
     </>
   )
